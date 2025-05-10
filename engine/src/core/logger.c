@@ -6,6 +6,7 @@
 #include <stdarg.h>
 
 #include <core/asserts.h>
+#include <platform/platform.h>
 
 void report_assertion_failure(const char* expression, const char* message, const char* file, i32 line) {
     log_output(LOG_LEVEL_FATAL, "Assertion failed: %s, message: '%s', in file: %s, line: %d", expression, message, file, line);
@@ -35,6 +36,5 @@ void log_output(log_level level, const char* message, ...) {
     char out_message2[32000];
     sprintf(out_message2, "%s%s\n", level_strings[level], out_message);
 
-    // TODO: Platform-specific output
-    printf("%s", out_message2);
+    platform_console_write(out_message2, level);
 }

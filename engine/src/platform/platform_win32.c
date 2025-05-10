@@ -141,7 +141,7 @@ void* platform_set_memory(void* dest, i32 value, u64 size) {
 
 void platform_console_write(const char* message, u8 color) {
     HANDLE console_handle = GetStdHandle(STD_OUTPUT_HANDLE);
-    static u8 levels[6] = {64, 4, 6, 2, 1, 8};
+    static u8 levels[6] = {8, 1, 2, 6, 4, 64};
     SetConsoleTextAttribute(console_handle, levels[color]);
 
     OutputDebugStringA(message);
