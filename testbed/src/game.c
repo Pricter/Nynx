@@ -3,12 +3,6 @@
 
 b8 game_initialize(game* game_inst) {
     NDEBUG("game_initialized() called");
-
-    NFATAL("This is a test message %f", 3.14);
-    NERROR("This is a test message %f", 3.14);
-    NINFO("This is a test message %f", 3.14);
-    NDEBUG("This is a test message %f", 3.14);
-    NTRACE("This is a test message %f", 3.14);
     return TRUE;
 }
 
