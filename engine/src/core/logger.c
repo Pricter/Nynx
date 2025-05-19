@@ -14,7 +14,11 @@ void report_assertion_failure(const char* expression, const char* message, const
 
 b8 initialize_logging(void) {
     // TODO: create a log file and set up logging
+<<<<<<< HEAD
     return true;
+=======
+    return TRUE;
+>>>>>>> 57384ec9a3d996c036e66174704bdd50d80ff1f0
 }
 
 void shutdown_logging(void) {
